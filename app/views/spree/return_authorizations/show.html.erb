@@ -1,8 +1,8 @@
 <div class="container py-5">
 <fieldset><h3><%= Spree.t(:return_request, scope: :return_authorizations_view) %></h3></fieldset>
 <fieldset>
-  <%= link_to Spree.t(:back_to_order, scope: :return_authorizations_view), spree.order_url(@order)  %> |
-  <%= link_to Spree.t(:back_to_return_history, scope: :return_authorizations_view), spree.return_authorizations_path %>
+  <%= link_to Spree.t(:back_to_order, scope: :return_authorizations_view), spree.order_url(@order), class: 'btn btn-sm btn-primary'  %> |
+  <%= link_to Spree.t(:back_to_return_history, scope: :return_authorizations_view), spree.return_authorizations_path, class: 'btn btn-sm btn-primary' %>
 </fieldset>
 
 <%= form_for [:admin, @order, @return_authorization] do |f| %>
