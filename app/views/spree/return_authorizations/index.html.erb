@@ -25,8 +25,8 @@
           <% order = return_authorization.order %>
           <tr>
             <td><%= link_to order.number , order_path(order) %></td>
-            <td><%= link_to(return_authorization.number, order_return_authorization_path(order,id: return_authorization.number), class: 'btn btn-sm btn-primary') %> </td>
-            <td><%= return_authorization.state %></td>
+            <td><%= link_to(return_authorization.number, order_return_authorization_path(order,id: return_authorization.number)) %> </td>
+            <td><%= return_authorization.authorized? ? 'Approved' : 'Pending'  %></td>
             <td><%= (return_authorization.created_at).strftime('%v') %></td>
             <td>
               <%= link_to(order_return_authorization_path(order,id: return_authorization.number), class: 'btn btn-sm btn-primary') do %>
