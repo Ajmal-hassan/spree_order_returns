@@ -8,7 +8,7 @@
 <%= form_for [:admin, @order, @return_authorization] do |f| %>
   <fieldset>
     <%= f.field_container :amount, class: ['alert alert-info'] do %>
-      <%= Spree.t(:return_request_status)%>  : <b><%= return_authorization.authorized? ? 'Approved' : 'Pending'  %></b>
+      <%= Spree.t(:return_request_status)%>  : <b><%= @return_authorization.authorized? ? 'Approved' : 'Pending'  %></b>
     <% end %>
     <%= render partial: 'form', locals: { f: f, display_only: false } %>
   </fieldset>
